@@ -1,0 +1,32 @@
+{
+  "name": "ConfigReaderApp",
+  "version": "1.0.0",
+  "description": "\"Hello World!\"",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "Rafael Denipote Ricci",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^19.0.4",
+    "electron-builder": "^23.0.3"
+  },
+  "dependencies": {
+    "blueimp-md5": "^2.19.0"
+  },
+  "build": {
+    "appId": "com.personal.apps",
+    "win": {
+      "target": "nsis",
+      "icon": "build/api_icon.ico",
+      "extraResources": [
+        "api_config.json",
+        "api_icon.png"
+      ]
+    }
+  }
+}
